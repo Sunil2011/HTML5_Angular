@@ -1,0 +1,46 @@
+
+<h3 style="color:#009999; padding-left:2%">  Add Student :- </h3>
+
+
+<form id="addForm" ng-submit="insertData()">
+    <input type="hidden" name="id" >
+        
+    <table>
+        <tr>
+            <td>
+                <label> Name:</label>
+            </td>
+            <td>
+                <input type="text" name="name" maxlength="50" ng-model="sName" required  >
+            </td>
+        </tr>
+        
+        <tr>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label> Department: </label>
+            </td>
+            <td>
+                <input type="text" name="department" maxlength="50" ng-model="sDep" required > 
+            </td>
+        </tr>
+        
+        <tr>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+        </tr>
+        
+        <tr>
+            <td>
+                <input type="submit" name="Add" value="Add" > 
+            </td>
+        </tr>
+    </table>
+        
+    </form>
+
+

@@ -1,0 +1,46 @@
+
+<h3 style="color:#009999; padding-left:2%">  Edit Student :- </h3>
+
+
+<form id="addForm" ng-submit="editStz()">
+    <input type="hidden" name="id" ng-model=" stzToEditId " >
+        
+    <table>
+        <tr>
+            <td>
+                <label> Name:</label>
+            </td>
+            <td>
+                <input type="text" name="name" maxlength="50"  ng-model=" stzToEditName " required  >
+            </td>
+        </tr>
+        
+        <tr>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label> Department: </label>
+            </td>
+            <td>
+                <input type="text" name="department" maxlength="50"  ng-model=" stzToEditDep " required > 
+            </td>
+        </tr>
+        
+        <tr>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+        </tr>
+        
+        <tr>
+            <td>
+                <input type="submit" name="Edit" value="Edit" > 
+            </td>
+            <td>               
+            </td>
+        </tr>
+    </table>
+        
+    </form>

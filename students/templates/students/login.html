@@ -1,0 +1,22 @@
+<div style="margin: 10px">
+    
+    <h3 style="color: #102cee"> Login here : </h3>
+    
+    <form id="loginForm" ng-submit="login()">
+        <label> Username : </label> &nbsp;
+        <input type="text" name="uname" ng-model="uname" maxlength="30" required  />
+        <p> </p>
+        
+        <label> Password : </label> &nbsp;
+        <input  type="password" name="upass" ng-model="upass" maxlength="30" required /> 
+        <p> </p>
+        
+        <input type="submit" name="submit" value="submit" />
+    </form>
+    
+</div>
+<div ng-if="Em">
+    <p  ng-repeat=" x in a_msg "> 
+        <span>{{x}} </span> 
+    </p>
+</div>

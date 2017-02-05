@@ -1,0 +1,14 @@
+
+<h2 style="color:#006699"> Delete Students </h2>
+
+<p> Are you sure to Delete <span style="color:#000099">{{ stzToDltName }} </span> 
+    with Department <span style="color:#000099"> {{ stzToDltDep }} </span>
+</p>
+
+<form id="dltForm" >
+    <input type="hidden" name="id" ng-model=" stzToDltId " >
+   
+     <input type="submit" name="del" value ="Yes" ng-click="dltStzYes()"/>
+     <input type="submit" name="del" value="No"  ng-click="dltStzNo()"/>
+     
+</form>

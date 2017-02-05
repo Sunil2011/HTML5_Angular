@@ -1,0 +1,41 @@
+<h4 style="color: #155821; float: right"><span ng-click="logout()" style="cursor: pointer"> Logout ! </span> </h4>
+<h3 style="color:#009999; padding-left:2%">  Students List :- </h3>
+<br/>
+
+<p style="padding-left: 2%">  <a id="add" href="" >Add new Student </a>  </p>
+
+<p>Search <span  class="glyphicon glyphicon-search"> </span> <input type="text" ng-model="test"> </p>
+
+<table class="table table-bordered table-hover">
+    <tr style="background-color: #cccccc">
+        <th ng-click="orderByMe('name')">Name</th>
+        <th ng-click="orderByMe('department')">Department</th>
+        <th>&nbsp;</th>
+    </tr>
+   
+    <!-- <tr ng-repeat="x in names | orderBy:myOrderBy | filter : test"> -->
+    
+   <tr dir-paginate="x in names | orderBy:myOrderBy |filter : test | itemsPerPage:5 ">  
+       <td>{{ x.name }}</td>
+        <td>{{ x.department }}</td>
+        <td>
+            <a id='edit' style="text-align: left" href="{{basePathAng}}/edit/{{x.id}}">Edit</a>
+            <a id='delete' style="text-align: right" href="{{basePathAng}}/delete/{{x.id}}">Delete</a>
+        </td>
+    </tr>
+</table>
+
+ <dir-pagination-controls
+       max-size="5"
+       direction-links="true"
+       boundary-links="true" >
+ </dir-pagination-controls>
+
+<script>
+     var host = "http://" + window.location.hostname;
+     
+     $(document).ready(function(){
+       $("#add").attr("href", host + "/HTML5Application_Angular/students/#/add");
+       
+     });
+</script>
